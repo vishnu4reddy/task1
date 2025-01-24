@@ -30,6 +30,7 @@ jobs:
 
       - name: Rebase each open PR
         run: |
+          set -x
           for pr in $(echo "${{ steps.pr_list.outputs.prs }}" | tr " " "\n")
           do
             pr_number=$(echo $pr | awk '{print $1}')
