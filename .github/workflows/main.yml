@@ -36,7 +36,7 @@ jobs:
             pr_number=$(echo $pr | awk '{print $1}')
             pr_branch=$(echo $pr | awk '{print $2}')
             
-            echo "Rebasing PR #$pr_number ($pr_branch)"
+            echo "Rebasing PR #$pr_number $(pr_branch)"
 
             # Fetch the base branch (main)
             git fetch origin main
